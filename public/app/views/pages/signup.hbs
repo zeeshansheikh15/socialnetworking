@@ -1,0 +1,100 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="/" class="btn btn-dark ml-2 mr-lg-2" type="submit">Home</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <li class="nav-item">
+                <div class="btn-group">
+                    <div class="dropdown">
+
+                    </div>
+
+                    <div class="dropdown">
+
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-dark mb1 dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-user"></i> Accounts
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu " style="background-color: black">
+                                <li><a href="/signup" class="btn btn-block ml-1 mr-lg-1"><i class="fas fa-user"></i>  Sign up</a></li>
+                                <li><a href="login" class=" btn btn-block ml-1 mr-lg-1"><i class="fas fa-sign-in-alt"></i>  Sign in</a></li>
+                                <li><a href="profile" class=" btn btn-block ml-1 mr-lg-1"><i class="fas fa-sign-in-alt"></i>  Profile</a></li>
+                                <li><a href="/" class="btn btn-block ml-1 mr-lg-1"><i class="fas fa-user"></i>  Sign up</a></li>
+                                <li><a href="login" class=" btn btn-block ml-1 mr-lg-1"><i class="fas fa-sign-in-alt"></i>  Sign in</a></li>
+                                <li><a href="profile" class=" btn btn-block ml-1 mr-lg-1"><i class="fas fa-sign-in-alt"></i>  Profile</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger ml-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div class=" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+
+    <div id = "addresscontent" class="col-md-4-*   my-2" style=" margin-left:0px; width: 100px; transition-property: width;transition-duration: 0.5s;">
+        <i class="fa fa-cog fa-spin fa-5x fa-fw" style="color:green"></i>
+    </div>
+
+    <form ng-submit="myCtrl.myFunc(reg)">
+        <div id = "addresscontent" class="col-md-4-*   my-2" style="width: 35%; margin-left: 30%; height: 1000px; transition-property: width;transition-duration: 0.5s;">
+            <div class="d-md-flex flex-column flex-md-equal w-100 my-md-3 pl-md-3">
+
+
+                <div class="shadow-lg bg-danger mr-md-3  pt-md-3 px-md-2 text-center text-white overflow-hidden" style=" margin-bottom:2%; border-radius: 21px 21px 0px 0px; ">
+                    <div class="p-2">
+                        <h4><b>Sign Up</b></h4>
+                    </div>
+
+                </div>
+                <div class="shadow-lg  mr-md-3  pt-md-3 px-md-2 text-center text-white overflow-hidden" style=" margin-bottom:2%; border-radius: 21px 21px 21px 21px; ">
+
+                    <div class="p-2">
+                        <label><h6>Fill in this form to create your account.</h6></label>
+                    </div>
+                    <div class="p-2">
+                        <input type="text" class="form-control input-lg" placeholder="Enter Email" name="email" ng-model="reg.email" required><br>
+                    </div>
+                    <div class="p-2">
+                        <input type="password" class="form-control input-lg" placeholder="Enter Password" name="password"  ng-model="reg.password" required><br>
+                    </div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label><br>
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p><br>
+
+                    <div class="p-2">
+                        <input  class="btn btn-success btn-lg btn-block " type="submit">Done</input>
+                    </div>
+                </div>
+
+
+                    <h4><b>
+                        <div class="jumbotron text-center" ng-show="myCtrl.loading">
+                        <span class="glyphicon glyphicon-repeat fa-spinner" >Loading..</span>
+                        </div>
+                        <div class="jumbotron text-center" ng-show="myCtrl.success" style="color: black">
+                            {{myCtrl.successMsg}}  <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+                        </div>
+                        <div class="jumbotron text-center" ng-show="!myCtrl.success" style="color: black">
+                            {{ myCtrl.errorMsg}}
+                        </div>
+                    </b></h4>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>

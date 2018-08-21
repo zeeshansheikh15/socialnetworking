@@ -1,0 +1,45 @@
+var express = require('express');
+var router = express.Router();
+var User = require('../models/user');
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+    console.log('index');
+    res.render('index', { title: 'Express' });
+
+});
+
+router.get('/profile', function(req, res, next) {
+    res.render('profile', { title: 'Express' });
+});
+
+router.post('/users', function (req, res) {
+    console.log('reached users');
+    var user = new User({
+        email  : req.body.email,
+        password: req.body.password
+    });
+    console.log('reached data');
+    if( req.body.password == null || req.body.password == '' || req.body.email == null || req.body.email == ''){
+        console.log('reached check');
+        res.json({message:'lola input to de', success: false});
+    }else{
+
+        user.save(function (err) {
+            if(err) {
+                console.log('reached if');
+                res.json({message:'lola email lready exists', success: false});
+            }
+            else {
+                console.log('reached else');
+                res.json({message:'lola hogya re', success: true});
+            }
+        });
+    }
+});
+
+
+
+
+
+module.exports = router;
