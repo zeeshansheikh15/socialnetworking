@@ -12,8 +12,8 @@ app.config(function($routeProvider,$locationProvider) {
         })
         .when("/login", {
             templateUrl : "app/views/pages/login.hbs",
-            controller: "myCtrl",
-            controllerAs: "myCtrl"
+            controller: "mainCtrl",
+            controllerAs: "main"
         })
         .when("/profile", {
             templateUrl : "app/views/profile.hbs",

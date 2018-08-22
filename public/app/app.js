@@ -1,2 +1,2 @@
-var app = angular.module("myApp", ["routeapp","controllerApp","userservices","ngAnimate"]);
+var app = angular.module("myApp", ["validateService","mainController","routeapp","controllerApp","userservices","ngAnimate"]);
 

@@ -42,7 +42,7 @@
 </nav>
 <div class=" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
 
-    <form ng-submit="myCtrl.mylogin(reg)">
+    <form ng-submit="main.mylogin(reg)">
         <div id = "addresscontent" class="col-md-4-*   my-2" style="width: 35%; margin-left: 30%; height: 1000px; transition-property: width;transition-duration: 0.5s;">
             <div class="d-md-flex flex-column flex-md-equal w-100 my-md-3 pl-md-3">
 
@@ -76,14 +76,14 @@
 
 
                 <h4><b>
-                    <div class="jumbotron text-center" ng-show="myCtrl.loading">
+                    <div class="jumbotron text-center" ng-show="main.loading">
                         <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
                     </div>
-                    <div class="jumbotron text-center" ng-show="myCtrl.success" style="color: black">
-                        {{myCtrl.successMsg}}&nbsp; <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+                    <div class="jumbotron text-center" ng-show="main.success" style="color: black">
+                        {{main.successMsg}}&nbsp; <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
                     </div>
-                    <div class="jumbotron text-center" ng-show="!myCtrl.success" style="color: black">
-                        {{ myCtrl.errorMsg}}&nbsp;
+                    <div class="jumbotron text-center" ng-show="!main.success" style="color: black">
+                        {{ main.errorMsg}}&nbsp;
                     </div>
                 </b></h4>
 

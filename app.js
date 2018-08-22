@@ -46,6 +46,9 @@ app.use(function (req, res, next) {
 
 
 app.use('/', indexRouter);
+app.get('*', function(req, res) {
+    res.render(path.join(__dirname + '/public/app/views/index.hbs')); // Set index.html as layout
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
