@@ -36,7 +36,7 @@ router.post('/users', function (req, res) {
 });
 
 
-router.post('/login', function (req, res, next) {
+router.post('/login', function (req, res) {
     console.log('reached users login');
 
     if( req.body.password == null || req.body.password == '' || req.body.email == null || req.body.email == ''){

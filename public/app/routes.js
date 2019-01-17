@@ -16,9 +16,10 @@ app.config(function($routeProvider,$locationProvider) {
             controllerAs: "main"
         })
         .when("/profile", {
-            templateUrl : "app/views/profile.hbs",
-            controller: "myCtrl",
-            controllerAs: "myCtrl"
+            templateUrl : "app/views/pages/profile.hbs"
+        })
+        .when("/logout", {
+            templateUrl : "app/views/pages/logout.hbs"
         })
         .otherwise({redirectTo: "/"});
 

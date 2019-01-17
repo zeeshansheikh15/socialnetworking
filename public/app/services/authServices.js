@@ -17,6 +17,19 @@ angular.module('validateService', [])
                 return false;
             }
         };
+
+        validationFactory.getUser = function () {
+            if(loginToken.getToken()){
+                return $http.post('/getuser');
+            }else{
+                $q.reject({message: 'user not found'});
+            }
+        };
+
+        validationFactory.logout =function () {
+            loginToken.removeToken();
+        };
+
         return validationFactory;
     })
 
@@ -28,6 +41,9 @@ angular.module('validateService', [])
         };
         loginTokenfactory.getToken = function () {
             $window.localStorage.getItem('token');
+        }
+        loginTokenfactory.removeToken = function () {
+            $window.localStorage.removeItem('token');
         }
 
         return loginTokenfactory;
